@@ -11,8 +11,6 @@ function getComputerChoice() {
     }
 }
 
-let winCounter = 0;
-let loseCounter = 0;
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == 'rock' && computerSelection == 'scissors' || playerSelection == 'scissors' && computerSelection == 'paper' || playerSelection == 'paper' && computerSelection == 'rock' ) {
@@ -29,6 +27,9 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
+let winCounter = 0;
+let loseCounter = 0;
+
 
 let playerSelection
 const computerSelection = getComputerChoice();
@@ -44,7 +45,4 @@ function playGame() {
         
     }
     return `The score is ${winCounter} to ${loseCounter}`
-
-    winCounter = 0;
-    loseCounter = 0;
 }
