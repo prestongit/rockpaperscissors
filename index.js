@@ -34,15 +34,29 @@ let loseCounter = 0;
 let playerSelection
 const computerSelection = getComputerChoice();
 
-function playGame() {
+function playGame(playerSelection) {
 
-    for (i=0; i<5; i++) {
-        playerSelection = window.prompt("Rock, paper, or scissors?")
-
+    for (i=0; i<1; i++) {
         const computerSelection = getComputerChoice();
 
         console.log(playRound(playerSelection, computerSelection))
         
     }
-    return `The score is ${winCounter} to ${loseCounter}`
+    console.log( `${winCounter} - ${loseCounter}`)
 }
+
+
+const rock = document.querySelector('#rock');
+rock.addEventListener('click', () => {
+    playGame("rock")
+});
+
+const paper = document.querySelector('#paper');
+paper.addEventListener('click', () => {
+    playGame("paper")
+});
+
+const scissors = document.querySelector('#scissors');
+scissors.addEventListener('click', () => {
+    playGame("scissors")
+});
