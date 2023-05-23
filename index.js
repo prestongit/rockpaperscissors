@@ -30,6 +30,8 @@ function playRound(playerSelection, computerSelection) {
 let winCounter = 0;
 let loseCounter = 0;
 
+const scorecall = document.querySelector('.scorecall');
+
 
 let playerSelection
 const computerSelection = getComputerChoice();
@@ -42,7 +44,7 @@ function playGame(playerSelection) {
         console.log(playRound(playerSelection, computerSelection))
         
     }
-    console.log( `${winCounter} - ${loseCounter}`)
+    scorecall.textContent = `${winCounter} - ${loseCounter}`
 }
 
 

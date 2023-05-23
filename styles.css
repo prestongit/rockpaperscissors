@@ -1,12 +1,22 @@
+body {
+  background-color: #51e2f5;
+}
+
 button {
   border: 2px solid black;
   height: 300px;
   width: 300px;
   display: inline-flex;
+  padding: 0;
+  border-radius: 5px;
 }
 .interface {
   display: flex;
   justify-content: space-around;
+}
+img {
+  height: 100%;
+  width: 100%;
 }
 
 .score {
@@ -15,4 +25,13 @@ button {
   margin-top: 40px;
   display: flex;
   justify-content: center;
+}
+
+.score {
+  display: block;
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
 }
