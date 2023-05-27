@@ -1,3 +1,6 @@
+//Picks a random number for the computer's pick.
+
+
 function getComputerChoice() {
     let choice = Math.floor(Math.random() * 3)
     if (choice === 0) {
@@ -10,7 +13,12 @@ function getComputerChoice() {
         return "scissors"
     }
 }
+
+//create a query selector for the play-by-play h1 element on index.html.
 const plays = document.querySelector('.plays');
+
+
+//Function that plays one round of rps, it also updates the DOM with the play by play.
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == 'rock' && computerSelection == 'scissors' || playerSelection == 'scissors' && computerSelection == 'paper' || playerSelection == 'paper' && computerSelection == 'rock' ) {
@@ -27,14 +35,18 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
+//Initializes the score keeping variables.
+
 let winCounter = 0;
 let loseCounter = 0;
+
+
+//create a query selector for updating the score on the DOM.
 
 const scorecall = document.querySelector('.scorecall');
 
 
-let playerSelection
-const computerSelection = getComputerChoice();
+//Calls the playRound function, updates the score to the DOM using the scorecall query selector, and resets the win/lose counters when a score of 5 is reached.
 
 function playGame(playerSelection) {
 
@@ -58,6 +70,7 @@ function playGame(playerSelection) {
     }
 }
 
+//creates the functionality of the 3 button choices.
 
 const rock = document.querySelector('#rock');
 rock.addEventListener('click', () => {
