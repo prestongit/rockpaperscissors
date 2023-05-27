@@ -45,6 +45,17 @@ function playGame(playerSelection) {
         
     }
     scorecall.textContent = `${winCounter} - ${loseCounter}`
+
+    if(winCounter == 5) {
+        plays.textContent = 'You win the game!'
+        winCounter =0;
+        loseCounter=0;
+    }
+    if(loseCounter == 5) {
+        plays.textContent = 'You lose the game!'
+        winCounter =0;
+        loseCounter=0;
+    }
 }
 
 
