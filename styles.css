@@ -29,6 +29,7 @@ img {
 
 .score {
   display: block;
+  height: auto;
 }
 
 h1 {

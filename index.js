@@ -10,19 +10,19 @@ function getComputerChoice() {
         return "scissors"
     }
 }
-
+const plays = document.querySelector('.plays');
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == 'rock' && computerSelection == 'scissors' || playerSelection == 'scissors' && computerSelection == 'paper' || playerSelection == 'paper' && computerSelection == 'rock' ) {
         winCounter+= 1;
-        return `You Win! ${playerSelection} beats ${computerSelection}`
+        plays.textContent = `You Win! ${playerSelection} beats ${computerSelection}`
     }
     else if(playerSelection == computerSelection) {
-        return "It's a tie!"
+        plays.textContent =  "It's a tie!"
     } 
     else {
         loseCounter+= 1;
-        return `You Lose! ${computerSelection} beats ${playerSelection}`
+        plays.textContent = `You Lose! ${computerSelection} beats ${playerSelection}`
     }
 
 }
@@ -62,3 +62,4 @@ const scissors = document.querySelector('#scissors');
 scissors.addEventListener('click', () => {
     playGame("scissors")
 });
+
